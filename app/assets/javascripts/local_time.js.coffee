@@ -105,7 +105,7 @@ class RelativeTime
     # Yesterday: "Saved yesterday at 8:15am"
     # This week: "Saved Thursday at 8:15am"
     else if day = @relativeWeekday()
-      "#{day} at #{@formatTime()}"
+      "on #{day} at #{@formatTime()}"
 
     # Older: "Saved on Dec 15"
     else
@@ -135,7 +135,7 @@ class RelativeTime
       "#{min} minutes"
     else if min < 90
       "an hour"
-    else if hr < 24
+    else if hr < 48
       "#{hr} hours"
     else
       null
